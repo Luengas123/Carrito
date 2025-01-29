@@ -1,0 +1,5 @@
+com\carrito\carrito\modelo\Producto.class
+com\carrito\carrito\modelo\ProductoDAO.class
+com\carrito\carrito\config\Conexion.class
+com\carrito\carrito\app\AppInitializer.class
+com\carrito\carrito\config\Test.class
