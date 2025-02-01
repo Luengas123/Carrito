@@ -14,7 +14,7 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-white" href="#">
+                    <a class="nav-link text-white" href="CarritoControlador?accion=listar">
                         <i class="fas fa-home"></i> (0) Carrito
                     </a>
                 </li>

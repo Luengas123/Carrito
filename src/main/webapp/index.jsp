@@ -11,10 +11,30 @@
     <body>
 
         <jsp:include page="components/Nevagacion.jsp" />
-        
-        <c:forEach items="${productos}" var="item">
-            <p>${item.nombre}</p>
-        </c:forEach>
+
+        <h5>Catalogo de Productos</h5>
+        <hr/>
+
+        <div class="row">
+            <c:forEach items="${productos}" var="item">
+                <div class="col-sm-3 mt-1">
+                    <form action="action">
+                        <div class="card">
+                            <img src="assets/img/productos/${item.imagen}" width="100%" alt="${item.nombre}"/>
+                            <div>
+                                <p class="fw-bold">${item.nombre}</p>
+                                <input type="hidden" name="accion" value="agregar"> 
+                                <input type="hidden" name="id" value="${item.idProd}">
+                                <button type="submit" class="btn btn-sm btn-primary">
+                                    <i class="fa fa-shopping-cart"></i> Agregar al carrito
+                                </button>
+                                <small class="fw-bold">$/${item.precio}</small>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </c:forEach>
+        </div>
 
         <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
